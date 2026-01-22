@@ -1,0 +1,168 @@
+:root {
+  --primary: #62c7eb;
+  --bg: #ffffff;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(img/WhatsApp\ Image\ 2026-01-19\ at\ 20.17.04.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/*hero sec*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(img/WhatsApp\ Image\ 2026-01-19\ at\ 20.17.04.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  z-index: 2;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1;
+  margin-top: 125px;
+}
+
+.hero .content .cta {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgb(1, 1, 3, 0.5);
+  z-index: 3;
+}
+
+.hero .content a {
+  padding: 1.3em 3em;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 300;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease Os;
+  cursor: pointer;
+  outline: none;
+}
+
+.hero .content a:hover {
+  background-color: var(--primary);
+  box-shadow: 0px 5px 12px var(--bg);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.hero .content a:active {
+  transform: translateY(-1px);
+}
+
+.hero .content .img {
+  border-radius: 50%;
+  border: 5px solid var(--primary);
+  margin: 20px auto;
+  width: 450px;
+  float: inline-end;
+  right: 50px;
+}
+
+/*media queries*/
+
+/*laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/*tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .hero .content {
+    flex-wrap: wrap;
+  }
+
+  .hero .content .img {
+    width: 350px;
+  }
+}
+/*hp*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .hero .content {
+    position: absolute;
+  }
+  .hero .content .img {
+    width: 250px;
+    position: relative;
+    right: 55px;
+  }
+  .hero .content h1 {
+    text-align: center;
+  }
+  .hero .content a {
+    position: relative;
+    right: -115px;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    font-size: 55%;
+  }
+  .hero .content {
+    position: absolute;
+  }
+  .hero .content .img {
+    width: 250px;
+    position: relative;
+    right: 38px;
+  }
+  .hero .content a {
+    position: relative;
+    right: -110px;
+  }
+}
